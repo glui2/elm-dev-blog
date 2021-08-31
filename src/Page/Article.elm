@@ -18,7 +18,7 @@ view metadata viewForPage =
             [ Element.row [ Element.spacing 10 ]
                 [ Author.view [] metadata.author
                 , Element.column [ Element.spacing 10, Element.width Element.fill ]
-                    [ Element.paragraph [ Font.bold, Font.size 24 ]
+                    [ Element.paragraph [ Font.bold, Font.size 24, Font.family [ Font.typeface "Roboto" ] ]
                         [ Element.text metadata.author.name
                         ]
                     , Element.paragraph [ Font.size 16 ]

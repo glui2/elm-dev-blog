@@ -1,14 +1,19 @@
 ---
 title: elm-pages-starter - a simple blog starter
 type: page
+display-photo: "images/author/gavin.jpg"
 ---
 
-This is an example repo to get you up and running with `elm-pages`.
+## Hey there! I'm Gav.
 
-The entrypoint file is `index.js`. That file imports `src/Main.elm`. The `content` folder is turned into your static pages. The rest is mostly determined by logic in the Elm code! Learn more with the resources below.
+I've recently been fortunate enough to join the world of Software Development. It's something I've been slowly working towards over the past couple of years, and have finally managed grab hold of an awesome opportunity at a great company.
 
-## Learn more about `elm-pages`
+As a result, I've been encouraged to start logging my learnings and my journey as a dev in a blog. I'll probably throw in some life thoughts as well. And maybe some thoughts about music that I've been listening to. And my keyboards.
 
-- Documentation site: https://elm-pages.com
-- [Elm Package docs](https://package.elm-lang.org/packages/dillonkearns/elm-pages/latest/)
-- [`elm-pages` blog](https://elm-pages.com/blog)
+...Okay let's just say this will be a "a bit of everything" blog. With a focus on dev.
+
+![](images/home-page/snrub.jpeg)
+
+And of course, Simpsons references.
+
+Hope you get something out of it, and thanks in advance for sussing my blog!

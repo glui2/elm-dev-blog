@@ -67,7 +67,7 @@ title text =
         |> Element.paragraph
             [ Element.Font.size 36
             , Element.Font.center
-            , Element.Font.family [ Element.Font.typeface "Raleway" ]
+            , Element.Font.family [ Element.Font.typeface "Calibri" ]
             , Element.Font.semiBold
             , Element.padding 16
             ]
@@ -91,10 +91,10 @@ articleIndex metadata =
 
 readMoreLink : Element msg
 readMoreLink =
-    Element.text "Continue reading >>"
+    Element.text "Read More >>"
         |> Element.el
             [ Element.centerX
-            , Element.Font.size 18
+            , Element.Font.size 12
             , Element.alpha 0.6
             , Element.mouseOver [ Element.alpha 1 ]
             , Element.Font.underline
@@ -111,11 +111,11 @@ postPreview post =
         , Element.Font.size 18
         ]
         [ title post.title
-        , Element.row [ Element.spacing 10, Element.centerX ]
+        , Element.row [ Element.spacing 10, Element.centerX, Element.width Element.fill ]
             [ Data.Author.view [ Element.width (Element.px 40) ] post.author
             , Element.text post.author.name
             , Element.text "•"
-            , Element.text (post.published |> Date.format "MMMM ddd, yyyy")
+            , Element.text (post.published |> Date.format "yyyy-MM-dd")
             ]
         , post.description
             |> Element.text

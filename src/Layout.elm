@@ -66,15 +66,16 @@ header currentPath =
             , Element.spaceEvenly
             , Element.width Element.fill
             , Element.Region.navigation
-            , Element.Border.widthEach { bottom = 1, left = 0, right = 0, top = 0 }
-            , Element.Border.color (Element.rgba255 40 80 40 0.4)
+            , Element.Border.widthEach { bottom = 10, left = 0, right = 0, top = 0 }
+            , Element.Border.color (Element.rgba255 255 240 140 1)
+            , Element.Background.color (Element.rgba255 255 221 0 1)
             ]
             [ Element.link []
                 { url = "/"
                 , label =
                     Element.row [ Font.size 30, Element.spacing 16 ]
                         [ DocumentSvg.view
-                        , Element.text "elm-pages-starter"
+                        , Element.text "GlueyToo"
                         ]
                 }
             , Element.row [ Element.spacing 15 ]
