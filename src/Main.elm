@@ -17,8 +17,8 @@ import Markdown.Renderer
 import Metadata exposing (Metadata)
 import MySitemap
 import Page.Article
-import Pages exposing (images, pages)
-import Pages.Manifest as Manifest
+import Pages exposing (PathKey, images, pages)
+import Pages.Manifest as Manifest exposing (Icon)
 import Pages.Manifest.Category
 import Pages.PagePath exposing (PagePath)
 import Pages.Platform
@@ -38,7 +38,7 @@ manifest =
     , themeColor = Just Color.white
     , startUrl = pages.index
     , shortName = Just "elm-pages-starter"
-    , sourceIcon = images.iconPng
+    , sourceIcon = images.gavinIcon
     , icons = []
     }
 
@@ -78,7 +78,8 @@ generateFiles :
     ->
         StaticHttp.Request
             (List
-                (Result String
+                (Result
+                    String
                     { path : List String
                     , content : String
                     }
@@ -130,7 +131,10 @@ update msg model =
             ( model, Cmd.none )
 
 
+
 --subscriptions : Model -> Sub Msg
+
+
 subscriptions _ _ _ =
     Sub.none
 
@@ -218,9 +222,9 @@ head metadata =
                 Metadata.Page meta ->
                     Seo.summaryLarge
                         { canonicalUrlOverride = Nothing
-                        , siteName = "elm-pages-starter"
+                        , siteName = "GlueyToo"
                         , image =
-                            { url = images.iconPng
+                            { url = images.gavinIcon
                             , alt = "elm-pages logo"
                             , dimensions = Nothing
                             , mimeType = Nothing
@@ -293,14 +297,14 @@ head metadata =
                         { canonicalUrlOverride = Nothing
                         , siteName = "elm-pages"
                         , image =
-                            { url = images.iconPng
+                            { url = images.gavinIcon
                             , alt = "elm-pages logo"
                             , dimensions = Nothing
                             , mimeType = Nothing
                             }
                         , description = siteTagline
                         , locale = Nothing
-                        , title = "elm-pages blog"
+                        , title = "Gav's blog"
                         }
                         |> Seo.website
            )

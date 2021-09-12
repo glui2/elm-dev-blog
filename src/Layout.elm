@@ -1,12 +1,12 @@
 module Layout exposing (view)
 
-import DocumentSvg
 import Element exposing (Element, Length)
 import Element.Background
 import Element.Border
 import Element.Font as Font
 import Element.Region
 import Html exposing (Html)
+import Html.Attributes exposing (src)
 import Metadata exposing (Metadata)
 import Pages
 import Pages.Directory as Directory exposing (Directory)
@@ -75,7 +75,8 @@ header currentPath =
                 { url = "/"
                 , label =
                     Element.row [ Font.size 30, Element.spacing 16 ]
-                        [ Element.text "GlueyToo"
+                        [ Element.image [ Element.width (Element.px 50), Element.Border.rounded 50 ] { src = "images/gavin-icon.jpeg", description = "" }
+                        , Element.text "GlueyToo"
                         ]
                 }
             , Element.row [ Element.spacing 15 ]
