@@ -4,7 +4,7 @@
   "author": "Gavin Lui",
   "title": "Hello World! 🚀",
   "description": "First post!",
-  "image": "images/article-covers/hello-dr-nick.jpg",
+  "image": "images/article-covers/hello-drNick.jpg",
   "published": "2021-09-01",
 }
 ---

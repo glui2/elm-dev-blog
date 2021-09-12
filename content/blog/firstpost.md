@@ -4,7 +4,7 @@
   "author": "Gavin Lui",
   "title": "About me",
   "description": "A bit about me and how I got into software dev.",
-  "image": "images/article-covers/about-me-any-key.jpeg",
+  "image": "images/article-covers/firstpost-anykey.jpeg",
   "published": "2021-09-01",
 }
 ---

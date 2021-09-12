@@ -1,7 +1,7 @@
 module Layout exposing (view)
 
 import DocumentSvg
-import Element exposing (Element)
+import Element exposing (Element, Length)
 import Element.Background
 import Element.Border
 import Element.Font as Font
@@ -69,19 +69,18 @@ header currentPath =
             , Element.Border.widthEach { bottom = 10, left = 0, right = 0, top = 0 }
             , Element.Border.color (Element.rgba255 255 240 140 1)
             , Element.Background.color (Element.rgba255 255 221 0 1)
+            , Element.height (Element.px 75)
             ]
             [ Element.link []
                 { url = "/"
                 , label =
                     Element.row [ Font.size 30, Element.spacing 16 ]
-                        [ DocumentSvg.view
-                        , Element.text "GlueyToo"
+                        [ Element.text "GlueyToo"
                         ]
                 }
             , Element.row [ Element.spacing 15 ]
-                [ elmDocsLink
-                , githubRepoLink
-                , highlightableLink currentPath Pages.pages.blog.directory "Blog"
+                [ githubRepoLink
+                , highlightableLink currentPath Pages.pages.blog.directory "Blog Posts"
                 ]
             ]
         ]
@@ -114,7 +113,7 @@ highlightableLink currentPath linkDirectory displayName =
 githubRepoLink : Element msg
 githubRepoLink =
     Element.newTabLink []
-        { url = "https://github.com/dillonkearns/elm-pages"
+        { url = "https://github.com/glui2"
         , label =
             Element.image
                 [ Element.width (Element.px 22)
